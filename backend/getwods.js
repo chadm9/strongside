@@ -10,7 +10,6 @@ casper.start();
 casper.thenOpen('https://the-strongside.com/weeklywod/', function () {
     this.echo(this.getTitle());
     if (this.exists('div.sidebar-wod')) {
-
         //this.echo('success');
         var wodLinks = this.getElementsAttribute('a.sidebar-readmore', 'href');
 
@@ -38,9 +37,10 @@ casper.thenOpen('https://the-strongside.com/weeklywod/', function () {
 
             })
         }
-    }else{
-       // this.echo('failure')
     }
+    // else{
+    //    this.echo('failure')
+    // }
 
 });
 
